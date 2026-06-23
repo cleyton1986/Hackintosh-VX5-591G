@@ -1,0 +1,27 @@
+# ─── Pastas privadas / de trabalho (NÃO vão para o GitHub) ───
+# Notas internas e exemplos de referência
+.docs/
+.exemples/
+
+# Diretório de trabalho local — contém:
+#  - EFI com dados pessoais (serial/MLB/ROM reais)
+#  - instalador da Apple (~16GB, não redistribuível)
+#  - ferramentas de terceiros (clones) e backups
+build/
+
+# Downloads gerados pelos scripts (macOS installer, macserial, etc. — pesados/não redistribuíveis)
+downloads/
+*.pkg
+*.dmg
+
+# ─── macOS ───
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# ─── Backups / logs ───
+*.bak
+*.bak-*
+*.log
