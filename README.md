@@ -1,5 +1,14 @@
 # 🍎 Hackintosh — Acer Aspire VX5‑591G (macOS Sequoia)
 
+<p align="center">
+  <a href="https://github.com/cleyton1986/Hackintosh-VX5-591G/releases"><img src="https://img.shields.io/github/v/release/cleyton1986/Hackintosh-VX5-591G?style=for-the-badge&color=success" alt="Release"></a>
+  <img src="https://img.shields.io/badge/macOS-Sequoia%2015-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS">
+  <img src="https://img.shields.io/badge/OpenCore-1.0.6-FF9300?style=for-the-badge" alt="OpenCore">
+  <img src="https://img.shields.io/badge/Intel-i7--7700HQ-0071C5?style=for-the-badge&logo=intel&logoColor=white" alt="Intel">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPL%20v3-blue?style=for-the-badge" alt="License"></a>
+  <img src="https://img.shields.io/github/stars/cleyton1986/Hackintosh-VX5-591G?style=for-the-badge&color=yellow" alt="Stars">
+</p>
+
 EFI do **OpenCore** + scripts para instalar o **macOS Sequoia 15** no notebook **Acer Aspire VX5‑591G** —
 preparando tudo a partir de um **PC com Linux** (ou do próprio macOS), **sem precisar de um Mac**.
 
