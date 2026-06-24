@@ -31,6 +31,33 @@ Gráficos acelerados, áudio, Wi‑Fi (com **HeliPort**), Bluetooth, Ethernet, U
 
 ---
 
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/img-01.png" width="100%"><br>
+      <sub><b>Sobre este Mac</b> — i7‑7700HQ · HD630 · 16GB</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/img-02.png" width="100%"><br>
+      <sub><b>Ajustes do Sistema</b> — Atualização de Software</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/img-03.png" width="100%"><br>
+      <sub><b>Safari</b> — internet funcionando</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/img-04.png" width="100%"><br>
+      <sub><b>Xcode + Simulador de iPhone</b> — desenvolvimento iOS</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 📂 Estrutura do projeto
 
 ```
@@ -42,6 +69,7 @@ Gráficos acelerados, áudio, Wi‑Fi (com **HeliPort**), Bluetooth, Ethernet, U
 │   └── gen-smbios.sh         ← gera seu número de série (SMBIOS) próprio
 ├── docs/
 │   └── INSTALACAO.md         ← guia manual detalhado + solução de problemas
+├── assets/                   ← screenshots do sistema
 └── .gitignore
 ```
 
