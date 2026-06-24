@@ -1,6 +1,10 @@
 # 🍎 Hackintosh — Acer Aspire VX5‑591G (macOS Sequoia)
 
 <p align="center">
+  <a href="README-ptbr.md">🇧🇷 Leia em Português</a>
+</p>
+
+<p align="center">
   <a href="https://github.com/cleyton1986/Hackintosh-VX5-591G/releases"><img src="https://img.shields.io/github/v/release/cleyton1986/Hackintosh-VX5-591G?style=for-the-badge&color=success" alt="Release"></a>
   <img src="https://img.shields.io/badge/macOS-Sequoia%2015-000000?style=for-the-badge&logo=apple&logoColor=white" alt="macOS">
   <img src="https://img.shields.io/badge/OpenCore-1.0.6-FF9300?style=for-the-badge" alt="OpenCore">
@@ -9,34 +13,34 @@
   <img src="https://img.shields.io/github/stars/cleyton1986/Hackintosh-VX5-591G?style=for-the-badge&color=yellow" alt="Stars">
 </p>
 
-EFI do **OpenCore** + scripts para instalar o **macOS Sequoia 15** no notebook **Acer Aspire VX5‑591G** —
-preparando tudo a partir de um **PC com Linux** (ou do próprio macOS), **sem precisar de um Mac**.
+**OpenCore** EFI + scripts to install **macOS Sequoia 15** on the **Acer Aspire VX5‑591G** laptop —
+preparing everything from a **Linux PC** (or macOS itself), **no Mac required**.
 
-> ⚠️ Hackintosh é para **estudo/teste**. Faça por sua conta e risco.
+> ⚠️ Hackintosh is for **study/testing**. Use at your own risk.
 
 ---
 
-## 💻 Hardware testado
+## 💻 Tested hardware
 
-| Componente | Detalhe | macOS |
+| Component | Detail | macOS |
 |---|---|---|
-| Modelo | Acer Aspire VX5‑591G | ✅ |
+| Model | Acer Aspire VX5‑591G | ✅ |
 | CPU | Intel Core **i7‑7700HQ** (Kaby Lake) | ✅ |
-| iGPU | **Intel HD Graphics 630** | ✅ acelerada (Metal 3) |
-| GPU dedicada | NVIDIA GTX 1050Ti | ⛔ desligada (sem driver macOS) |
-| Áudio | Realtek **ALC255** | ✅ |
-| Wi‑Fi | Intel **7265** | ✅ via `itlwm` + app HeliPort |
+| iGPU | **Intel HD Graphics 630** | ✅ accelerated (Metal 3) |
+| Dedicated GPU | NVIDIA GTX 1050Ti | ⛔ disabled (no macOS driver) |
+| Audio | Realtek **ALC255** | ✅ |
+| Wi‑Fi | Intel **7265** | ✅ via `itlwm` + HeliPort app |
 | Bluetooth / Ethernet | Intel / Realtek RTL8111 | ✅ |
-| Tela 15.6" 1080p, teclado, trackpad, brilho | | ✅ |
-| **HDMI externo** | ligado à iGPU | ❌ não funciona no Sequoia (limitação Kaby Lake) |
+| 15.6" 1080p display, keyboard, trackpad, brightness | | ✅ |
+| **External HDMI** | wired to the iGPU | ❌ not working on Sequoia (Kaby Lake limitation) |
 
 ---
 
-## ✅ O que funciona
+## ✅ What works
 
-Gráficos acelerados, áudio, Wi‑Fi (com **HeliPort**), Bluetooth, Ethernet, USB, teclado, trackpad, brilho, iCloud.
+Accelerated graphics, audio, Wi‑Fi (with **HeliPort**), Bluetooth, Ethernet, USB, keyboard, trackpad, brightness, iCloud.
 
-⛔ **NÃO atualize para o macOS Tahoe (26)** — ele remove o áudio das placas Intel (ALC255 para de funcionar). **Fique no Sequoia 15.**
+⛔ **Do NOT update to macOS Tahoe (26)** — it removes audio on Intel chips (ALC255 stops working). **Stay on Sequoia 15.**
 
 ---
 
@@ -46,58 +50,59 @@ Gráficos acelerados, áudio, Wi‑Fi (com **HeliPort**), Bluetooth, Ethernet, U
   <tr>
     <td align="center" width="50%">
       <img src="assets/img-01.png" width="100%"><br>
-      <sub><b>Sobre este Mac</b> — i7‑7700HQ · HD630 · 16GB</sub>
+      <sub><b>About This Mac</b> — i7‑7700HQ · HD630 · 16GB</sub>
     </td>
     <td align="center" width="50%">
       <img src="assets/img-02.png" width="100%"><br>
-      <sub><b>Ajustes do Sistema</b> — Atualização de Software</sub>
+      <sub><b>System Settings</b> — Software Update</sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
       <img src="assets/img-03.png" width="100%"><br>
-      <sub><b>Safari</b> — internet funcionando</sub>
+      <sub><b>Safari</b> — internet working</sub>
     </td>
     <td align="center" width="50%">
       <img src="assets/img-04.png" width="100%"><br>
-      <sub><b>Xcode + Simulador de iPhone</b> — desenvolvimento iOS</sub>
+      <sub><b>Xcode + iPhone Simulator</b> — iOS development</sub>
     </td>
   </tr>
 </table>
 
 ---
 
-## 📂 Estrutura do projeto
+## 📂 Project structure
 
 ```
 .
-├── README.md                ← este arquivo (visão geral + início rápido)
-├── EFI/                      ← EFI do OpenCore pronta (gere seu próprio serial — passo 1)
+├── README.md                ← this file (overview — English, default)
+├── README-ptbr.md           ← Portuguese version
+├── EFI/                      ← ready OpenCore EFI (generate your own serial — step 1)
 ├── scripts/
-│   ├── create-usb.sh         ← baixa o macOS + cria o pendrive de instalação (automático)
-│   └── gen-smbios.sh         ← gera seu número de série (SMBIOS) próprio
+│   ├── create-usb.sh         ← downloads macOS + builds the install USB (automatic)
+│   └── gen-smbios.sh         ← generates your own serial (SMBIOS)
 ├── docs/
-│   └── INSTALACAO.md         ← guia manual detalhado + solução de problemas
-├── assets/                   ← screenshots do sistema
+│   └── INSTALACAO.md         ← detailed manual guide + troubleshooting (PT-BR)
+├── assets/                   ← system screenshots
 └── .gitignore
 ```
 
 ---
 
-## 🚀 Início rápido (scripts)
+## 🚀 Quick start (scripts)
 
-> Requisitos: **Linux** ou **macOS**, com `git`, `python3`, `curl`, `unzip`.
-> No Linux ainda: `sgdisk`, `mkfs.vfat`, `mkfs.exfat`, `wipefs`.
+> Requirements: **Linux** or **macOS**, with `git`, `python3`, `curl`, `unzip`.
+> On Linux also: `sgdisk`, `mkfs.vfat`, `mkfs.exfat`, `wipefs`.
 
-### 1) Gere seu número de série (obrigatório)
-A EFI vem **sem serial** (cada Hackintosh precisa de um único):
+### 1) Generate your serial (required)
+The EFI ships **without a serial** (each Hackintosh needs a unique one):
 ```bash
 ./scripts/gen-smbios.sh --inject
 ```
-> Grava `Serial`, `MLB` e `UUID` em `EFI/OC/config.plist`. (O `ROM` = MAC da sua rede é opcional — veja o guia.)
+> Writes `Serial`, `MLB` and `UUID` to `EFI/OC/config.plist`. (`ROM` = your network MAC is optional — see the guide.)
 
-### 2) Crie o pendrive de instalação (apaga o pendrive!)
-Descubra o disco do pendrive com `lsblk` (Linux) ou `diskutil list` (macOS) e rode:
+### 2) Create the install USB (erases the USB!)
+Find the USB disk with `lsblk` (Linux) or `diskutil list` (macOS), then run:
 ```bash
 # Linux
 sudo ./scripts/create-usb.sh --disk /dev/sdX
@@ -105,40 +110,40 @@ sudo ./scripts/create-usb.sh --disk /dev/sdX
 # macOS
 sudo ./scripts/create-usb.sh --disk /dev/diskN
 ```
-O script **baixa o macOS Sequoia** (BaseSystem + instalador completo), **particiona** o pendrive e **copia** a EFI + instalador. 🪄
+The script **downloads macOS Sequoia** (BaseSystem + full installer), **partitions** the USB and **copies** the EFI + installer. 🪄
 
-Opções úteis:
-- `--mode online` → usa só a recuperação (pendrive menor, ≥8GB; instala pela internet)
-- `--skip-download` → reaproveita o que já foi baixado em `downloads/`
-- `--help` → todas as opções
+Useful options:
+- `--mode online` → recovery only (smaller USB, ≥8GB; installs over the internet)
+- `--skip-download` → reuse what was already downloaded in `downloads/`
+- `--help` → all options
 
-### 3) Instale
-Plugue no Acer → **F2** (BIOS: Secure Boot **OFF**, UEFI) → **F12** → boote pelo pendrive → siga o `LEIA‑PRIMEIRO.txt` que o script deixou no pendrive (ou o **[guia detalhado](docs/INSTALACAO.md)**).
-
----
-
-## 📖 Guia completo
-
-Passo a passo detalhado (BIOS, download manual, criação do pendrive na mão, instalação, pós‑instalação,
-Wi‑Fi, e **solução de problemas**) em **[docs/INSTALACAO.md](docs/INSTALACAO.md)**.
+### 3) Install
+Plug it into the Acer → **F2** (BIOS: Secure Boot **OFF**, UEFI) → **F12** → boot from the USB → follow the `LEIA‑PRIMEIRO.txt` the script left on the USB (or the **[detailed guide](docs/INSTALACAO.md)**).
 
 ---
 
-## ⚙️ Resumo técnico da EFI
+## 📖 Full guide
 
-OpenCore **1.0.6** · SMBIOS `MacBookPro14,3` · iGPU HD630 nativa KBL `0x591b0000` · ALC255 layout 99 ·
-dGPU desligada (`SSDT-DDGPU`) · Wi‑Fi `itlwm` · Ethernet RTL8111 · `SecureBootModel = Disabled`.
-Detalhes completos no [guia](docs/INSTALACAO.md#️-detalhes-técnicos-da-efi).
+Detailed step‑by‑step (BIOS, manual download, building the USB by hand, install, post‑install, Wi‑Fi, and
+**troubleshooting**) in **[docs/INSTALACAO.md](docs/INSTALACAO.md)** *(in Portuguese)*.
 
 ---
 
-## 🙏 Créditos
+## ⚙️ EFI technical summary
+
+OpenCore **1.0.6** · SMBIOS `MacBookPro14,3` · native KBL HD630 iGPU `0x591b0000` · ALC255 layout 99 ·
+dGPU disabled (`SSDT-DDGPU`) · Wi‑Fi `itlwm` · Ethernet RTL8111 · `SecureBootModel = Disabled`.
+Full details in the [guide](docs/INSTALACAO.md#️-detalhes-técnicos-da-efi).
+
+---
+
+## 🙏 Credits
 
 - [Acidanthera](https://github.com/acidanthera) — OpenCore, Lilu, WhateverGreen, VirtualSMC
 - [OpenIntelWireless](https://github.com/OpenIntelWireless) — `itlwm` + HeliPort
-- [OpCore‑Simplify](https://github.com/lzhoang2801/OpCore-Simplify) — geração da EFI
+- [OpCore‑Simplify](https://github.com/lzhoang2801/OpCore-Simplify) — EFI generation
 - [corpnewt](https://github.com/corpnewt) — gibMacOS, GenSMBIOS
-- [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) — guia de referência
+- [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) — reference guide
 
 ---
 
@@ -164,14 +169,14 @@ Any contribution is voluntary and greatly appreciated! It helps keep the project
 
 This project is licensed under the **GNU General Public License v3.0** — see the [LICENSE](LICENSE) file for details.
 
-> Os componentes de terceiros incluídos (OpenCore, Lilu, WhateverGreen e demais kexts) mantêm as suas próprias licenças.
+> Bundled third‑party components (OpenCore, Lilu, WhateverGreen and other kexts) retain their own licenses.
 
-**This software is provided "as is", without warranty of any kind.** Hackintosh é para fins de estudo/teste — use por sua conta e risco.
+**This software is provided "as is", without warranty of any kind.** Hackintosh is for educational/testing purposes — use at your own risk.
 
 ---
 
 <p align="center">
-  <b>Desenvolvido por OctalDev — Cleyton Alves</b> | Senior Software Engineer
+  <b>Developed by OctalDev — Cleyton Alves</b> | Senior Software Engineer
 </p>
 
-> Feito para o **Acer Aspire VX5‑591G**. Se ajudou, deixe uma ⭐. Hackintosh é para estudo/testes. 🚀
+> Built for the **Acer Aspire VX5‑591G**. If it helped, leave a ⭐. Hackintosh is for study/testing. 🚀
